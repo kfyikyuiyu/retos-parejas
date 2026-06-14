@@ -1,0 +1,15 @@
+.inbox-container { max-width: 800px; margin: 32px auto; padding: 0 24px; }
+.inbox-header { margin-bottom: 32px; }
+.inbox-header h1 { font-size: 32px; margin-bottom: 16px; }
+.inbox-tabs { display: flex; gap: 12px; margin-bottom: 24px; }
+.tab { padding: 10px 20px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary); border-radius: var(--radius-full); cursor: pointer; font-size: 14px; font-weight: 500; }
+.tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+.responses-list { display: flex; flex-direction: column; gap: 16px; }
+.response-card { background: var(--bg-card); border-radius: var(--radius-lg); padding: 20px; border: 1px solid rgba(255,255,255,0.05); }
+.response-card.own { border-left: 4px solid var(--primary); }
+.response-type { font-size: 14px; color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+.response-content { font-size: 16px; margin-bottom: 8px; color: var(--text-primary); }
+.response-answer { font-size: 15px; color: var(--text-secondary); background: rgba(255,255,255,0.03); padding: 10px; border-radius: var(--radius-sm); margin-bottom: 8px; }
+.response-date { font-size: 12px; color: var(--text-muted); }
+.empty-inbox { text-align: center; padding: 48px; color: var(--text-muted); }
+.empty-inbox span { font-size: 48px; display: block; margin-bottom: 12px; }

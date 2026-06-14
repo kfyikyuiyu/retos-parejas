@@ -1,0 +1,3 @@
+.optional { color: var(--text-muted); font-size: 12px; font-weight: 400; margin-left: 4px; }
+.auth-form .input-group { margin-bottom: 20px; }
+@media (max-width: 480px) { .auth-card { max-height: 90vh; overflow-y: auto; } }

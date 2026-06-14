@@ -1,0 +1,38 @@
+:root {
+  --primary: #6C5CE7;
+  --primary-dark: #5A4BD1;
+  --secondary: #FF6B6B;
+  --accent: #FFEAA7;
+  --bg-dark: #0F0F23;
+  --bg-card: #1A1A2E;
+  --bg-input: #16213E;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0B0;
+  --text-muted: #6C6C80;
+  --success: #00B894;
+  --warning: #FDCB6E;
+  --error: #FF6B6B;
+  --info: #74B9FF;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 50px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

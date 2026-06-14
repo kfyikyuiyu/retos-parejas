@@ -1,0 +1,26 @@
+.challenges-page { min-height: calc(100vh - 72px); background: var(--bg-dark); }
+.challenges-container { max-width: 800px; margin: 0 auto; padding: 32px 24px; text-align: center; }
+.challenges-header { margin-bottom: 32px; }
+.challenges-header h1 { font-size: 36px; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.challenges-header p { color: var(--text-secondary); font-size: 16px; }
+.category-tabs { display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+.tab-btn { padding: 12px 24px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary); border-radius: var(--radius-full); cursor: pointer; font-size: 15px; font-weight: 500; transition: var(--transition); }
+.tab-btn:hover { border-color: var(--primary); color: var(--text-primary); background: rgba(108,92,231,0.1); }
+.tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.hot-tab.active { background: linear-gradient(135deg, #e74c3c, #ff6b6b); border-color: transparent; }
+.progress-counter { margin-bottom: 24px; color: var(--text-muted); font-size: 14px; }
+.mini-bar { width: 200px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin: 8px auto 0; overflow: hidden; }
+.mini-bar-fill { height: 100%; background: var(--primary); border-radius: 3px; transition: width 0.3s ease; }
+.game-card { perspective: 1000px; margin-bottom: 32px; }
+.card-inner { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 48px 32px; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); transition: var(--transition); }
+.game-card:hover { border-color: rgba(108,92,231,0.3); transform: translateY(-2px); }
+.card-category { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; font-size: 14px; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+.category-icon { font-size: 20px; }
+.card-content p { font-size: 24px; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+.card-instruction { color: var(--text-muted); font-size: 14px; font-style: italic; margin-top: 16px; }
+.game-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+.hot-disclaimer { color: var(--text-muted); font-size: 13px; background: rgba(231,76,60,0.1); padding: 12px; border-radius: var(--radius-md); border: 1px solid rgba(231,76,60,0.3); margin-top: 8px; }
+.answer-input-area { max-width: 500px; margin: 0 auto 24px; text-align: left; animation: fadeIn 0.3s ease; }
+.answer-input-area textarea { width: 100%; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.2); color: var(--text-primary); border-radius: var(--radius-md); padding: 12px; font-size: 15px; resize: vertical; margin-bottom: 12px; font-family: inherit; }
+.answer-input-area textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 2px rgba(108,92,231,0.3); }
+.answer-actions { display: flex; gap: 8px; justify-content: flex-end; }
