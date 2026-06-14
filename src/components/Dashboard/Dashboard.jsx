@@ -29,6 +29,7 @@ const Dashboard = () => {
     })
   }, [user])
 
+  // MODIFICACIÓN AQUÍ: ya no validamos existencia, solo guardamos el código ingresado
   const handleLinkPartner = () => {
     if (!partnerInput.trim()) {
       setLinkMessage('❌ Ingresa un código válido')
@@ -38,6 +39,7 @@ const Dashboard = () => {
       setLinkMessage('❌ No puedes vincularte contigo mismo')
       return
     }
+    // Directamente vinculamos sin verificar el localStorage
     setPartnerCode(partnerInput.trim())
     setLinkMessage('✅ ¡Pareja vinculada correctamente! Ahora dile que ingrese tu código en su dashboard.')
     setPartnerInput('')
