@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import './Dashboard.css'
@@ -30,12 +30,16 @@ const Dashboard = () => {
   }, [user])
 
   const handleLinkPartner = () => {
-    if (!partnerInput.trim()) { setLinkMessage('❌ Ingresa un código válido'); return }
-    if (partnerInput.trim() === user.code) { setLinkMessage('❌ No puedes vincularte contigo mismo'); return }
-    const allUsers = Object.keys(localStorage).filter(key => key.startsWith('user_')).map(key => JSON.parse(localStorage.getItem(key)))
-    if (!allUsers.some(u => u.code === partnerInput.trim())) { setLinkMessage('❌ Código no encontrado'); return }
+    if (!partnerInput.trim()) {
+      setLinkMessage('❌ Ingresa un código válido')
+      return
+    }
+    if (partnerInput.trim() === user.code) {
+      setLinkMessage('❌ No puedes vincularte contigo mismo')
+      return
+    }
     setPartnerCode(partnerInput.trim())
-    setLinkMessage('✅ ¡Pareja vinculada correctamente!')
+    setLinkMessage('✅ ¡Pareja vinculada correctamente! Ahora dile que ingrese tu código en su dashboard.')
     setPartnerInput('')
   }
 
@@ -90,6 +94,7 @@ const Dashboard = () => {
             ) : (
               <div className="link-form">
                 <h3>Vincular pareja</h3>
+                <p className="help-text">Pídele a tu pareja que te comparta su código y pégalo aquí. Luego él/ella debe hacer lo mismo con tu código.</p>
                 <div className="link-input-group">
                   <input type="text" className="input-field" placeholder="Código de tu pareja" value={partnerInput} onChange={(e) => setPartnerInput(e.target.value)} />
                   <button className="btn btn-primary" onClick={handleLinkPartner}>Vincular</button>
